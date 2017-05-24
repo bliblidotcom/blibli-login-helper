@@ -16,9 +16,10 @@ Blibli Login-Register Validation Helper
 /**
  * Validating email format
  * @param {string} email string
+ *
  * @return {boolean} true if valid
  */
- 
+
  validateEmail(string)
 ```
 
@@ -27,6 +28,7 @@ Blibli Login-Register Validation Helper
 /**
  * Validating password format
  * @param {string} password string
+ *
  * @return {string} error code when not valid
  */
 
@@ -39,6 +41,7 @@ validatePassword(string)
  * Handle error code in login/register from backend
  * @param {Object} response body from backend
  * @param {Object} self/this from component
+ *
  * @return {Object} error object that assign to error data
  */
 
@@ -50,6 +53,8 @@ failedHandler(response, self)
 /**
  * Initialize facebook SDK
  * @param {string} facebookAppId
+ *
+ * void
  */
 
 FBinitialize(facebookAppId)
@@ -61,6 +66,8 @@ FBinitialize(facebookAppId)
 /**
  * Login with Facebook SDK
  * @param {Function} submitFn
+ *
+ * void
  */
 
 loginFacebook(submitFn)

@@ -9,6 +9,7 @@
 /**
  * Validating email format
  * @param {string} email string
+ *
  * @return {boolean} true if valid
  */
 module.exports.validateEmail = function (string) {
@@ -20,6 +21,7 @@ module.exports.validateEmail = function (string) {
 /**
  * Validating password format
  * @param {string} password string
+ *
  * @return {string} error code when not valid
  */
 module.exports.validatePassword = function (string) {
@@ -41,6 +43,7 @@ module.exports.validatePassword = function (string) {
  * Handle error code in login/register from backend
  * @param {Object} response body from backend
  * @param {Object} self/this from component
+ *
  * @return {Object} error object that assign to error data
  */
 module.exports.failedHandler = function (response, self) {
@@ -73,6 +76,8 @@ module.exports.failedHandler = function (response, self) {
 /**
  * Initialize facebook SDK
  * @param {string} facebookAppId
+ *
+ * void
  */
 module.exports.FBinitialize = function (facebookAppId) {
   (function (d, s, id) {
@@ -103,6 +108,8 @@ module.exports.FBinitialize = function (facebookAppId) {
 /**
  * Login with Facebook SDK
  * @param {Function} submitFn
+ *
+ * void
  */
 module.exports.loginFacebook = function (submitFn) {
   /* eslint-disable no-undef */

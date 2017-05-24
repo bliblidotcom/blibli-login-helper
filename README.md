@@ -7,8 +7,6 @@ Blibli Login-Register Validation Helper
 [![GitHub Star](https://img.shields.io/github/stars/mazipan/blibli-login-helper.svg?maxAge=3600)](https://github.com/mazipan/blibli-login-helper/stargazers) 
 [![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/blibli-login-helper.svg?maxAge=3600)](https://github.com/mazipan/blibli-login-helper/network/members) 
 
-[![version](https://img.shields.io/npm/v/blibli-login-helper.svg?maxAge=3600)](https://www.npmjs.com/package/blibli-login-helper)
-[![downloads](https://img.shields.io/npm/dt/blibli-login-helper.svg?maxAge=3600)](https://www.npmjs.com/package/blibli-login-helper) 
 
 ## Available Methods
 

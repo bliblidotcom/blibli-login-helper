@@ -7,10 +7,15 @@ Blibli.com Login-Register Validation Helper in Javascript
 [![GitHub Star](https://img.shields.io/github/stars/mazipan/blibli-login-helper.svg?maxAge=3600)](https://github.com/mazipan/blibli-login-helper/stargazers) 
 [![GitHub Contributors](https://img.shields.io/github/contributors/mazipan/blibli-login-helper.svg?maxAge=3600)](https://github.com/mazipan/blibli-login-helper/network/members) 
 
+## How to import
+```javascript
+// just import anything you need
+import {checkEmailError, checkPasswordError, failedHandler, FBinitialize, loginFacebook} from 'blibli-login-helper'
+```
 
 ## Available Methods
 
-```
+```javascript
 /**
  * Validating email format
  * @param {string} email string
@@ -22,7 +27,7 @@ Blibli.com Login-Register Validation Helper in Javascript
 ```
 
 
-```
+```javascript
 /**
  * checkEmailError for email format
  * @param {string} email string
@@ -35,7 +40,7 @@ Blibli.com Login-Register Validation Helper in Javascript
 ```
 
 
-```
+```javascript
 /**
  * Validating password format
  * @param {string} password string
@@ -47,7 +52,7 @@ validatePassword(string)
 ```
 
 
-```
+```javascript
 /**
  * checkPasswordError for password format
  * @param {string} password string
@@ -60,7 +65,7 @@ validatePassword(string)
 ```
 
 
-```
+```javascript
 /**
  * Get all error data with empty set
  *
@@ -71,7 +76,7 @@ validatePassword(string)
 ```
 
 
-```
+```javascript
 /**
  * Handle error code in login/register from backend
  * @param {Object} response body from backend
@@ -84,7 +89,7 @@ failedHandler(response, self)
 ```
 
 
-```
+```javascript
 /**
  * Initialize facebook SDK
  * @param {string} facebookAppId
@@ -96,8 +101,7 @@ FBinitialize(facebookAppId)
 ```
 
 
-```
-
+```javascript
 /**
  * Login with Facebook SDK
  * @param {Function} submitFn

@@ -1,5 +1,5 @@
 # blibli-login-helper
-Blibli Login-Register Validation Helper
+Blibli.com Login-Register Validation Helper in Javascript
 
 [![License](https://img.shields.io/github/license/mazipan/blibli-login-helper.svg?maxAge=3600)](https://github.com/mazipan/blibli-login-helper) 
 [![Github Issue](https://img.shields.io/github/issues/mazipan/blibli-login-helper.svg?maxAge=3600)](https://github.com/mazipan/blibli-login-helper/issues) 

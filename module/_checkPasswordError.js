@@ -10,12 +10,12 @@
 module.exports._checkPasswordError = function (string, self) {
   var obj = require('./_validatePassword');
 
-  var error = { password: { error: false, code: null, text: '' } };
+  var error = { error: false, code: null, text: '' };
   var errorPass = obj._validatePassword(string);
   if (errorPass !== '') {
-    error = { password: { error: true, code: errorPass, text: self.$t('error_login.' + errorPass) } };
+    error = { error: true, code: errorPass, text: self.$t('error_login.' + errorPass) };
   }
-  Object.assign(self.errorData, error);
+  if (self.errorData) self.errorData.password = error;
 
   return errorPass;
 };

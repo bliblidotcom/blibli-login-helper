@@ -12,10 +12,10 @@ module.exports._checkEmailError = function (string, self) {
   var obj = require('./_validateEmail');
 
   var isValid = obj._validateEmail(string);
-  var error = {username: {error: false, code: null, text: ''}};
+  var error = {error: false, code: null, text: ''};
   if (!isValid) {
-    error = {username: {error: true, code: 'INVALID_EMAIL', text: self.$t('error_login.INVALID_EMAIL')}};
+    error = {error: true, code: 'INVALID_EMAIL', text: self.$t('error_login.INVALID_EMAIL')};
   }
-  Object.assign(self.errorData, error);
+  if (self.errorData) self.errorData.username = error;
   return isValid;
 };

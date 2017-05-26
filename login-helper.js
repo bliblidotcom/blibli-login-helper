@@ -19,6 +19,24 @@ module.exports.validateEmail = function (string) {
   return REGEX_EMAIL.test(string);
 };
 
+/**
+ * checkEmailError for email format
+ * @param {string} email string
+ * @param {Object} self/this from component
+ *
+ * @return {boolean} true if valid
+ */
+
+module.exports.checkEmailError = function (string, self) {
+  var isValid = validateEmail(string);
+  var error = {username: {error: false, code: null, text: ''}};
+  if (!isValid) {
+    error = {username: {error: true, code: 'INVALID_EMAIL', text: self.$t('error_login.INVALID_EMAIL')}};
+  }
+  Object.assign(self.errorData, error);
+  return isValid;
+};
+
 /* eslint-disable no-useless-escape */
 /**
  * Validating password format
@@ -42,6 +60,41 @@ module.exports.validatePassword = function (string) {
   }
 
   return errorCode;
+};
+
+/**
+ * checkPasswordError for password format
+ * @param {string} password string
+ * @param {Object} self/this from component
+ *
+ * @return {string} empty if valid
+ */
+
+module.exports.checkPasswordError = function (string, self) {
+  var error = { password: { error: false, code: null, text: '' } };
+  var errorPass = validatePassword(string);
+  if (errorPass !== '') {
+    error = { password: { error: true, code: errorPass, text: self.$t('error_login.' + errorPass) } };
+  }
+  Object.assign(self.errorData, error);
+
+  return errorPass;
+};
+
+/**
+ * Get all error data with empty set
+ *
+ * @return {Object} error object with empty data
+ */
+
+module.exports.getEmptyError = function () {
+  var error = {
+    username: { error: false, code: null, text: '' },
+    password: { error: false, code: null, text: '' },
+    general: { error: false, code: null, text: '' }
+  };
+  
+  return error;
 };
 
 /**

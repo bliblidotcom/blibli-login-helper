@@ -24,6 +24,19 @@ Blibli Login-Register Validation Helper
 
 ```
 /**
+ * checkEmailError for email format
+ * @param {string} email string
+ * @param {Object} self/this from component
+ *
+ * @return {boolean} true if valid
+ */
+
+ checkEmailError(string, self)
+```
+
+
+```
+/**
  * Validating password format
  * @param {string} password string
  *
@@ -31,6 +44,30 @@ Blibli Login-Register Validation Helper
  */
 
 validatePassword(string) 
+```
+
+
+```
+/**
+ * checkPasswordError for password format
+ * @param {string} password string
+ * @param {Object} self/this from component
+ *
+ * @return {string} empty if valid
+ */
+
+ checkPasswordError(string, self)
+```
+
+
+```
+/**
+ * Get all error data with empty set
+ *
+ * @return {Object} error object with empty data
+ */
+
+ getEmptyError()
 ```
 
 

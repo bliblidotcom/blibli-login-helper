@@ -26,7 +26,7 @@ module.exports._FBinitialize = function (facebookAppId) {
         appId: facebookAppId,
         cookie: true,
         xfbml: true,
-        version: 'v2.7'
+        version: 'v5.0'
       });
     }
   };

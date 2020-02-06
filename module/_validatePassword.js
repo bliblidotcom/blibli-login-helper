@@ -11,7 +11,7 @@
 // (?=.*\d) -> at least one number
 // (?=.*[a-zA-Z]) -> at least one letter
 // [0-9a-zA-Z]{6,} -> length of minimum six character
-const PASS_REGEX = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{6,}$/
+const PASS_REGEX = /^(?=.*\d)(?=.*[a-zA-Z])(.+){6,}$/
 
 // test functions
 const TESTS = [

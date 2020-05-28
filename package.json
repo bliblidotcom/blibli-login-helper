@@ -2,7 +2,7 @@
   "name": "@blibli/blibli-login-helper",
   "description": "Blibli.com Login-Register Validation Helper",
   "version": "0.0.7",
-  "license": "GNU GPLv3",
+  "license": "MIT",
   "author": "PT Global Digital Niaga",
   "homepage": "https://github.com/bliblidotcom/blibli-login-helper",
   "main": "login-helper.js",

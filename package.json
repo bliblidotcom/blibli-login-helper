@@ -1,26 +1,27 @@
 {
   "name": "@blibli/blibli-login-helper",
   "description": "Blibli.com Login-Register Validation Helper",
-  "version": "0.0.6",
-  "license": "GNU GPLv3",
-  "author": "Irfan Maulana (https://github.com/mazipan/)",
-  "homepage": "https://mazipan.github.io/",
+  "version": "0.0.7",
+  "license": "MIT",
+  "author": "PT Global Digital Niaga",
+  "homepage": "https://github.com/bliblidotcom/blibli-login-helper",
   "main": "login-helper.js",
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mazipan/blibli-login-helper.git"
+    "url": "https://github.com/bliblidotcom/blibli-login-helper.git"
   },
   "bugs": {
-    "url": "https://github.com/mazipan/blibli-login-helper/issues"
+    "url": "https://github.com/bliblidotcom/blibli-login-helper/issues"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "scripts": {
+    "test": "jest"
   },
   "devDependencies": {
+    "jest": "^25.1.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

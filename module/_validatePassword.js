@@ -7,20 +7,26 @@
  *
  * @return {string} error code when not valid
  */
-module.exports._validatePassword = function (string) {
-  var errorCode = '';
 
-  if (typeof string !== 'undefined' && string !== null) {
-    if (string.length < 6 || string.search(/\d/) < 0 || string.search(/[a-zA-Z]/) < 0) {
-      errorCode = 'INVALID_PASSWORD';
-    } else if (string.indexOf('%') > 0) {
-      errorCode = 'INVALID_CHAR_PERCENT';
-    } else if (string.indexOf('=') > 0) {
-      errorCode = 'INVALID_CHAR_ASSIGNMENT';
-    }
-  } else {
-    errorCode = 'INVALID_BLANK';
+// (?=.*\d) -> at least one number
+// (?=.*[a-zA-Z]) -> at least one letter
+// (.+){6,} -> length of minimum six character of any letter or special char
+const PASS_REGEX = /^(?=.*\d)(?=.*[a-zA-Z])(.+){6,}$/
+
+// test functions
+const TESTS = [
+  {
+    f: (s) => !s || !('' + s).trim(),
+    e: 'INVALID_BLANK'
+  },
+  {
+    f: (s) => !PASS_REGEX.test(s),
+    e: 'INVALID_PASSWORD'
   }
+]
 
-  return errorCode;
+
+module.exports._validatePassword = function (s) {
+  const t = TESTS.find(i => i.f(s)) || {}
+  return t.e || ''
 };

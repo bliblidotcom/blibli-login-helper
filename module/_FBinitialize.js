@@ -6,7 +6,7 @@
  *
  * void
  */
-module.exports._FBinitialize = function (facebookAppId) {
+module.exports._FBinitialize = function (facebookAppId, cookie = true) {
   (function (d, s, id) {
     var js = {};
     var fjs = d.getElementsByTagName(s)[0];
@@ -24,7 +24,7 @@ module.exports._FBinitialize = function (facebookAppId) {
     if (typeof FB !== 'undefined') {
       FB.init({
         appId: facebookAppId,
-        cookie: false,
+        cookie: cookie,
         xfbml: true,
         version: 'v5.0'
       });

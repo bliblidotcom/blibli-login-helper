@@ -26,7 +26,7 @@ module.exports._FBinitialize = function (facebookAppId, options) {
     if (typeof FB !== 'undefined') {
       FB.init({
         appId: facebookAppId,
-        cookie: cookie,
+        cookie,
         xfbml: true,
         version: 'v5.0'
       });

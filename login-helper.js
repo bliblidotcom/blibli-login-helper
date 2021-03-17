@@ -38,10 +38,10 @@ module.exports.failedHandler = function (response, self) {
   return obj._failedHandler(response, self);
 };
 
-module.exports.FBinitialize = function (facebookAppId) {
+module.exports.FBinitialize = function (facebookAppId, options) {
   var obj = require('./module/_FBinitialize');
   
-  return obj._FBinitialize(facebookAppId);
+  return obj._FBinitialize(facebookAppId, options);
 };
 
 module.exports.loginFacebook = function (submitFn) {
